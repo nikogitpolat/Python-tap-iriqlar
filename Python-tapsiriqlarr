@@ -1,0 +1,92 @@
+# 1. 123 rəqəmini string/character-ə çevirin və tipini yoxlayın.
+a = 123
+a_str = str(a)
+print("1)", a_str, type(a_str))
+
+# 2. 19.99 dəyərini tam ədədə çevirin və nəticəni çap edin.
+b = 19.99
+b_int = int(b)
+print("2)", b_int)
+
+# 3. "500" dəyərini numeric-ə çevirin və 2-yə bölüb nəticəni çap edin.
+c = "500"
+c_num = int(c)
+print("3)", c_num / 2)
+
+# 4. a = 8 və b = 12 yaradın. a < b və a == b şərtlərini yoxlayın, nəticələri çap edin.
+a = 8
+b = 12
+print("4)", a < b, a == b)
+
+# 5. x = 5, y = 10, z = 15 yaradın. (x < y) and (y < z) şərtini yoxlayın və nəticəni çap edin.
+x = 5
+y = 10
+z = 15
+print("5)", (x < y) and (y < z))
+
+# 6. 5-i 4-ə bölün. Tam bölmə, qalıq və adi bölmə nəticələrini çap edin.
+print("6)", 5 // 4, 5 % 4, 5 / 4)
+
+# 7. 4-cü dərəcəyə qədər nömrə yaradın.
+for i in range(5):
+    print("7)", i**4)
+
+# 8. qiymət = 75.5 yaradın. Onu tam ədədə çevirin və tipini yoxlayın.
+qiymet = 75.5
+qiymet_int = int(qiymet)
+print("8)", qiymet_int, type(qiymet_int))
+
+# 9. n = 10 yaradın. (n > 10) or (n = 15) and (n < 25) şərtlərini yoxlayın, nəticələri çap edin.
+n = 10
+print("9)", (n > 10) or (n == 15) and (n < 25))
+
+# 10. "42.8" dəyərini əvvəl float-a, sonra tam ədədə çevirin və hər addımda tipi yoxlayın.
+d = "42.8"
+d_float = float(d)
+d_int = int(d_float)
+print("10)", d_float, type(d_float))
+print("10)", d_int, type(d_int))
+
+# STR tapşırıqları
+
+# 1. s = "Programming" yaradın. Uzunluğunu və ilk simvolunu çap edin.
+s = "Programming"
+print("STR1)", len(s), s[0])
+
+# 2. s1 = "Hello" və s2 = "World" yaradın. Onları boşluqla birləşdirin və nəticəni çap edin.
+s1 = "Hello"
+s2 = "World"
+print("STR2)", s1 + " " + s2)
+
+# 3. text = "Python" yaradın. Son simvolunu çap edin.
+text = "Python"
+print("STR3)", text[-1])
+
+# 4. s = "Artificial" yaradın. "Art" hissəsini silib çıxarın və çap edin.
+s = "Artificial"
+print("STR4)", s[3:])
+
+# 5. word = "Code" yaradın. Tərsinə çevirin və nəticəni çap edin.
+word = "Code"
+print("STR5)", word[::-1])
+
+# 6. s = "word" yaradın. Bütün simvolları böyük hərflərə çevirin.
+s = "word"
+print("STR6)", s.upper())
+
+# 7. text = "data" yaradın. Onu həm böyük, həm də kiçik hərflərə çevirin.
+text = "data"
+print("STR7)", text.upper(), text.lower())
+
+# 8. s = "Python-R-Java" yaradın. "-" ilə ayırın və nəticəni çap edin.
+s = "Python-R-Java"
+print("STR8)", s.split("-"))
+
+# 9. ad = "Ayxan" və yaş = 25 yaradın. f-string ilə "Ayxan 25 yaşındadır" çap edin.
+ad = "Ayxan"
+yas = 25
+print(f"STR9) {ad} {yas} yaşındadır")
+
+# 10. s = "salam-dunya" yaradın. "-" ni boşluqla əvəz edin və nəticəni çap edin.
+s = "salam-dunya"
+print("STR10)", s.replace("-", " "))
