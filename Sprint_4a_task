@@ -1,0 +1,57 @@
+# 1) Hesablayıcı funksiya
+def hesablayici():
+    try:
+        a = float(input("Birinci rəqəmi daxil edin: "))
+        b = float(input("İkinci rəqəmi daxil edin: "))
+        operation = input("Əməliyyat seçin (toplama, çıxma, vurma, bölmə): ").lower()
+
+        if operation == "toplama":
+            print(a + b)
+        elif operation == "çıxma":
+            print(a - b)
+        elif operation == "vurma":
+            print(a * b)
+        elif operation == "bölmə":
+            if b == 0:
+                print("Sıfıra bölmək olmaz.")
+            else:
+                print(a / b)
+        else:
+            print("Yanlış əməliyyat seçimi.")
+    except ValueError:
+        print("Zəhmət olmasa rəqəm daxil edin.")
+    except TypeError:
+        print("Uyğunsuz tipdə dəyərlər daxil edilib.")
+    finally:
+        print("Hesablama bitdi")
+
+# 2) 1-50 arası 11-ə bölünənlər
+bolunenler = [i for i in range(1, 51) if i % 11 == 0]
+
+# 3) Sözlərin ilk hərfləri
+sozler = ["kitab", "qələm", "defter", "silgi"]
+ilk_herfler = [s[0] for s in sozler]
+
+# 4) Şəhərlər və kodlar dict
+seherler = ["Bakı", "Gəncə", "Sumqayıt"]
+kodlar = [12, 22, 18]
+seher_kodlari = dict(zip(seherler, kodlar))
+
+# 5) Lambda ilə km -> mil çevirici
+km_to_mil = lambda km: km * 0.621371
+km_values = [1, 5, 10, 42, 100]
+mil_values = list(map(km_to_mil, km_values))
+
+# 6) Qiymətlərə 18% vergi əlavə etmək
+qiymetler = [100, 200, 300, 400]
+vergi_ile = list(map(lambda x: x * 1.18, qiymetler))
+
+# 7) İki siyahını ikiqat artırıb sonra cəmləmək
+list1 = [3, 7, 12]
+list2 = [2, 4, 6]
+cemler = list(map(lambda x, y: (x*2 + y*2), list1, list2))
+
+# 8) reduce ilə ən kiçik qiymət
+from functools import reduce
+qiymetler = [150, 80, 220, 45]
+en_kicik = reduce(lambda x, y: x if x < y else y, qiymetler)
